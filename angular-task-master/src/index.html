@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Angular2App</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div id="wrapper" class="">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Home
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a href="#">Link 1</a>
+                </li>
+              <li>
+                    <a href="#">Link 2</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+          <div id="top-strip" class="container-fluid nospace">
+                <button type="button" class="menu-btn"></button>
+            <!-- icons -->
+          </div>
+
+              <my-app>loading...</my-app>
+        </div>
+
+  </div>
+  <script>
+
+   $(".menu-btn").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+  </script>
+  </body>
+</body>
+</html>

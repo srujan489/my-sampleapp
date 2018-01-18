@@ -1,0 +1,227 @@
+#top-strip{
+  height: 40px;
+  background-color: #00a0b4;
+}
+
+.container-fluid{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.row.inner-head{
+  padding: 20px 40px 20px 60px;
+}
+.row.inner-head h1{color:white; font-size: 18px;}
+
+my-app .container-fluid:first-child{
+  background-color: #00bcd4;
+}
+
+.nav-tabs .nav-link{border:0}
+.nav-tabs{border:0;   padding: 0 40px 0 60px;}
+.nav-link{padding: 6px 60px 15px 0}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    color: #cbecf3;
+    background-color: transparent;
+    border: 0;
+}
+a, a:hover, a:active, a:visited{color:white; font-weight: bold; border:none;}
+.nav-tabs .nav-link.active{
+    color: white;
+    border-bottom: #ffff71 2px solid;
+}
+
+.tab-pane{
+  background-color:white;
+  padding-bottom: 50px;
+}
+
+p{margin:0; padding: 60px;}
+.col-12, .col-6, .row{padding-right:0; padding-left:0; margin-left:0; margin-right:0}
+.sub-navs{
+    box-shadow: 2px 2px 2px #ccc;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0 40px 0 60px;
+}
+.sub-navs li{
+  list-style: none;
+ padding: 15px 80px 15px 0px;
+}
+.sub-navs a,.sub-navs a:hover,.sub-navs a:active, .sub-navs a:visited{ color: #999;}
+.sub-navs a.active{color: #00bcd4;}
+.form{padding: 10px 60px 10px 60px;}
+.form.head{padding-top:30px;}
+.form h1{color:#333; font-size: 18px}
+.right{text-align:right;}
+.form-el{
+  width: 100%;
+    padding: 8px;
+    border: 0;
+    border-bottom: 1px solid #ccc;}
+
+.orangebtn{
+ background: #ef744b;
+  font-weight: bold;
+  text-shadow: 1px 1px #964427;
+  color: white;
+}
+.menu-btn{
+background: url(../images/menu-icon.png) center center no-repeat;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: 0;
+    background-size: 100%;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+}
+
+.more-icon{position:relative;}
+.more-icon:after{
+    content: ' ';
+    background: url(../images/icon-down-arrow.png) center center no-repeat;
+    width: 12px;
+    height: 12px;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    right: -18px;
+}
+
+/**/
+
+body {
+  overflow-x: hidden;
+}
+
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+  padding-left: 250px;
+}
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  box-shadow: 0 2px 2px #ccc;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+}
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+}
+
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #666;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav>.sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.sidebar-nav>.sidebar-brand a {
+  color: #333;
+}
+
+
+@media(min-width:768px) {
+  #wrapper {
+    padding-left: 0;
+  }
+  #wrapper.toggled {
+    padding-left: 250px;
+  }
+  #sidebar-wrapper {
+    width: 0;
+  }
+  #wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+  }
+  #page-content-wrapper {
+    position: relative;
+  }
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
+}
+
+/*Responsive Styles*/
+/*less than 860px*/
+@media only screen and (max-width: 860px) {
+    .row.sub-navs {
+        display: block;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+   .row.inner-head{
+    padding: 20px 20px 20px 20px;
+  }
+  .menu-btn{top:10px;}
+  .nav-tabs{padding: 0 20px 0 20px;}
+  .nav-link{padding: 6px 20px 15px 0}
+  p{padding: 20px;}
+  .sub-navs{padding: 0 20px 0 20px;}
+  .sub-navs li{padding: 15px 20px 15px 0px;}
+  .form{padding: 10px 20px 10px 20px;}
+}
